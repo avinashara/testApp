@@ -14,27 +14,27 @@
                 <input type="text" class="form-control" id="city" placeholder="Select city" name="city" ng-change="smCtrl.change()" ng-model="smCtrl.userData.city"> </div>
         </div>
     </div>
-    </div>
-    <div class="row row-margin col-md-12" ng-if="smCtrl.rows.length ===0"> <strong>No records found.</strong> </div>
-    <div class="row row-margin col-md-12 tableBodyScroll" ng-if="smCtrl.rows.length >0">
-        <table class="tableWidth">
-            <thead>
-                <tr>
-                    <th class="col-xs-2">Id</th>
-                    <th class="col-xs-2">User</th>
-                    <th class="col-xs-2">Skills</th>
-                    <th class="col-xs-2">City</th>
-                    <th class="col-xs-2">Source</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="row in smCtrl.rows">
-                    <td class="col-xs-2">{{row.id}}</td>
-                    <td class="col-xs-2">{{ row.name }}</td>
-                    <td class="col-xs-2">{{ row.skills}}</td>
-                    <td class="col-xs-2">{{ row.city }}</td>
-                    <td class="col-xs-2">{{ row.source }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+</div>
+<div class="row row-margin col-md-12" ng-if="smCtrl.rows.length ===0"> <strong>No records found.</strong> </div>
+<div class="row row-margin col-md-12 tableBodyScroll" ng-if="smCtrl.rows.length >0">
+    <table class="tableWidth">
+        <thead>
+            <tr>
+                <th class="col-xs-2">Id</th>
+                <th class="col-xs-2">User</th>
+                <th class="col-xs-2">Skills</th>
+                <th class="col-xs-2">City</th>
+                <th class="col-xs-2">Source</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="row in smCtrl.rows">
+                <td class="col-xs-2">{{row.id}}</td>
+                <td class="col-xs-2">{{ row.name }}</td>
+                <td class="col-xs-2">{{ row.skills}}</td>
+                <td class="col-xs-2">{{ row.city }}</td>
+                <td class="col-xs-2">{{ row.source }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

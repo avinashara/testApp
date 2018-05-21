@@ -1,40 +1,25 @@
 <section>
     <h1>Create Search Filter</h1>
     <form name="myForm">
-        <!--<div class="form-group" ng-class="{'has-success':!myForm.skill.$valid}">
-            <label for="email">Skillsets:</label>
-            <input type="text" class="form-control" id="skillset" placeholder="Skill sets" name="skill" ng-model="maniCtrl.skills" required> <span style="color:red" ng-show="myForm.skill.$dirty && myForm.skill.$invalid">
-                <span ng-show="myForm.skill.$error.required">Skill sets is required.</span> </span>
-        </div>-->
         <div ng-class="{'has-success':!myForm.skill.$valid}">
             <label for="email">Skillsets:</label>
             <tags-input ng-model="maniCtrl.skills" required name="skill" placeholder="Skill sets">
-                <auto-complete source="maniCtrl.skillArray" ></auto-complete>
-            </tags-input> 
-            <span style="color:red" ng-show="myForm.skill.$dirty && myForm.skill.$invalid">
-                <span ng-show="myForm.skill.$error.required">Skill sets is required.</span>
-            </span>
+                <auto-complete source="maniCtrl.skillArray"></auto-complete>
+            </tags-input> <span style="color:red" ng-show="myForm.skill.$dirty && myForm.skill.$invalid">
+                <span ng-show="myForm.skill.$error.required">Skill sets is required.</span> </span>
         </div>
         <div class="form-group" ng-class="{'has-success':myForm.src.$valid}">
             <label for="pwd">Source:</label>
-            <!--<input type="text" class="form-control" id="source" placeholder="Source" name="src" ng-model="maniCtrl.source" required> -->
             <tags-input ng-model="maniCtrl.source" required name="source" placeholder="Source">
-                <auto-complete source="maniCtrl.sourceArray" ></auto-complete>
-            </tags-input>             
-            <span style="color:red" ng-show="myForm.src.$dirty && myForm.src.$invalid">
+                <auto-complete source="maniCtrl.sourceArray"></auto-complete>
+            </tags-input> <span style="color:red" ng-show="myForm.src.$dirty && myForm.src.$invalid">
                 <span ng-show="myForm.src.$error.required">Source is required.</span> </span>
         </div>
         <div class="form-group" ng-class="{'has-success':myForm.city.$valid}">
             <label for="pwd">City:</label>
-            <!--<input type="text" class="form-control" id="city" placeholder="City" name="city" ng-model="maniCtrl.city" required>-->
-            
             <tags-input ng-model="maniCtrl.city" required name="city" placeholder="City">
-                <auto-complete source="maniCtrl.cityArray" ></auto-complete>
-            </tags-input> 
-            
-            
-            
-            <span style="color:red" ng-show="myForm.city.$dirty && myForm.city.$invalid">
+                <auto-complete source="maniCtrl.cityArray"></auto-complete>
+            </tags-input> <span style="color:red" ng-show="myForm.city.$dirty && myForm.city.$invalid">
                 <span ng-show="myForm.city.$error.required">City is required.</span> </span>
         </div>
         <button type="button" class="btn btn-default" ng-click="maniCtrl.submit()" ng-disabled="myForm.$pristine ||myForm.$invalid|| myForm.skill.$dirty && myForm.skill.$invalid ||  
