@@ -1,0 +1,82 @@
+body {
+    font-size: 14px;
+    font-family: "Helvetica Neue", "Arial", "sans-serif";
+    max-width: 1000px;
+    margin: 0 auto;
+    align-content: center
+}
+
+button {
+    width: 100px;
+    background: orange;
+    margin-right: 10px;
+    border: 0px solid #00AA66;
+}
+
+#header {
+    display: flex;
+    background: orange;
+}
+
+.logo {
+    padding: 25px 10px;
+    width: 28%;
+}
+
+#header .logo h1 {
+    margin: 5px 0;
+}
+
+.subtitle {
+    margin-left: 12%;
+    font-style: italic;
+}
+
+.margin-left {
+    margin-left: 92%;
+}
+
+.div-content {
+    font-size: xx-large;
+    display: flex;
+    width: 100%;
+}
+
+.logo-content {
+    font-size: 29px;
+    font-family: cursive;
+    font-weight: 800;
+}
+
+#content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.tableBodyScroll tbody {
+    display: block;
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.tableBodyScroll thead,
+tbody,
+tfoot tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table td {
+    padding: 5px;
+    width: 31%;
+}
+
+table th {
+    background: #ccc;
+    padding: 5px;
+}
+
+.row-margin {
+    margin: auto;
+}

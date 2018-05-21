@@ -1,0 +1,43 @@
+<!-- summary -->
+<div class="row row-margin">
+    <h3>Search Filter</h3>
+    <div class="row">
+        <div class="header">
+            <div class="form-group col-md-4">
+                <label for="email">Skillsets:</label>
+                <input type="text" class="form-control" id="skillset" placeholder="Enter required skills sets" ng-change="smCtrl.change()" name="skillset" ng-model="smCtrl.userData.skills">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="pwd">Source:</label>
+                <input type="text" class="form-control" id="source" placeholder="select source" name="source" ng-change="smCtrl.change()" ng-model="smCtrl.userData.src">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="pwd">City:</label>
+                <input type="text" class="form-control" id="city" placeholder="Select city" name="city" ng-change="smCtrl.change()" ng-model="smCtrl.userData.city">
+            </div>
+        </div>
+    </div>
+    <div class="row row-margin" ng-if="smCtrl.rows.length ===0">
+        <strong>No records found.</strong>
+    </div>
+    <div class="row row-margin" ng-if="smCtrl.rows.length >0">
+        <table class="tableBodyScroll">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Skills</th>
+                    <th>City</th>
+                    <th>Source</th>
+                </tr>
+            </thead>
+            <tboday>
+                <tr ng-repeat="row in smCtrl.rows">
+                    <td>{{ row.name }}</td>
+                    <td>{{ row.skills}}</td>
+                    <td>{{ row.city }}</td>
+                    <td>{{ row.source }}</td>
+                </tr>
+            </tboday>
+        </table>
+    </div>
+</div>
